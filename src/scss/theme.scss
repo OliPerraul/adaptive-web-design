@@ -1,0 +1,104 @@
+@import "~reveal.js/css/theme/template/mixins.scss";
+@import "~reveal.js/css/theme/template/settings.scss";
+
+$orange: #ffa000;
+$backgroundColor: #fff;
+$mainColor: #777;
+$headingColor: #222;
+$linkColor: $orange;
+$mainFontSize: 36px;
+$mainFont: Helvetica, Arial, sans-serif;
+$headingFont: Helvetica, Arial, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+$heading1Size: 2em;
+$heading2Size: 1.5em;
+$heading3Size: 1.15em;
+$heading4Size: 1em;
+
+@import "~reveal.js/css/theme/template/theme.scss";
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+.reveal {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+
+  h1 {
+    color: $orange;
+  }
+
+  h2 {
+    position: relative;
+    margin: 0 0 2.75rem 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: calc(50% - 25px);
+      width: 50px;
+      height: 6px;
+      background: $orange;
+    }
+  }
+
+  pre {
+    box-shadow: none;
+
+    .hljs {
+      padding: 25px;
+      border-radius: 5px;
+    }
+  }
+
+	code:not(.hljs) {
+		padding: 5px;
+		background: #eee;
+		border-radius: 5px;
+		font-size: 0.7em;
+	}
+
+  .progress {
+    height: 8px;
+  }
+
+	blockquote {
+		padding: 25px;
+		background: $gris;
+		border-radius: 5px;
+	}
+
+	img,
+	video {
+		max-height: 575px;
+    max-width: 95%;
+    height: auto;
+    width: auto;
+		border: none!important;
+		box-shadow: none!important;
+	}
+
+	@media (max-width: 1024px) {
+		font-size: 24px;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 18px;
+	}
+}

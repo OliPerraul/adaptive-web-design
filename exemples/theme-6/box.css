@@ -1,0 +1,22 @@
+.element-1,
+.element-2,
+.element-3 {
+  width: 25%;
+}
+
+.element-1 {
+  padding: 10px;
+  margin: 10px;
+  background: #ccc;
+}
+
+.element-2 {
+  padding: 10%;
+  margin: 5%;
+  background: #777;
+}
+
+.element-3 {
+  background: #222;
+  color: #fff;
+}

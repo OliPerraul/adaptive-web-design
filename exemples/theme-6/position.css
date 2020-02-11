@@ -1,0 +1,47 @@
+.element-1,
+.element-2,
+.element-3,
+.element-4,
+.element-5 {
+  width: 25%;
+  padding: 10px;
+}
+
+.element-1 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ccc;
+}
+
+.element-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #777;
+}
+
+.element-3 {
+  background: #222;
+  color: #fff;
+}
+
+.element-4 {
+  position: relative;
+  background: #000;
+  height: 150px;
+  top: 50px;
+  color: #fff;
+}
+
+.element-5 {
+  position: absolute;
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  color: #000;
+}
+
+body {
+  min-height: 2000px;
+}
