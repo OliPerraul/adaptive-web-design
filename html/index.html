@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/stylesheet.css">
+<style>
+
+
+.content-text-color
+{
+    color:black;    
+}
+
+.title-text-color
+{
+    color:#2e7aa0;    
+}
+
+.title-background-color
+{
+    background-color:azure;    
+}
+
+.content-background-color
+{
+    background-color:white;    
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+/* Logo */
+
+.logo {    
+    vertical-align: middle;
+    width: 100%;
+}
+
+.logo img {    
+    
+    display: block;          
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 128px;
+    
+}
+
+/*Navbar*/
+
+.topnav { 
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;    
+}
+  
+.topnav .item {
+    float: left;
+    color: inherit;
+    vertical-align: middle;        
+    text-decoration: none;    
+}
+
+/*Article*/
+
+article {    
+    padding:16px;
+    margin:16px;
+    float:left;
+}
+
+article .content {
+    padding:16px;
+    margin:16px;
+    float:left;
+}
+
+/*Sidenav*/
+
+.sidenav {
+    width: 20%;
+    padding:16px;
+    margin:16px;
+    float: right; 
+}
+
+  
+.sidenav .item {
+    height: 100%;    
+    float: left;
+    color: inherit;
+    vertical-align: middle;        
+    text-decoration: none;    
+}
+
+/* Content */
+
+.content article {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translate(0, -50%);
+  padding: 1rem;
+}
+
+.content h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.content {
+  display: grid;
+}
+
+.content .left-half {  
+  grid-column: 1;
+}
+
+.content .right-half {  
+  grid-column: 1;
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+/* @media only screen and (min-width: 600px) {
+    
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+} */
+</style>
+</head>
+
+<header>
+    <div class="logo title-background-color">
+        <img src="../resources/logo.png" alt="Logo"> 
+    </div>
+    <nav class="
+        topnav 
+        title-text-color 
+        title-background-color">    
+        <li><a class="item" href="/TODO">Accueil</a> </li>
+        <li><a class="item" href="/TODO">Blogue</a> </li>
+        <li><a class="item" href="/TODO">A propos</a> </li>
+        <li><a class="item" href="/TODO">Nous joindre</a> </li>        
+    </nav>
+</header>
+
+<section>
+
+<section class="
+    content 
+    content-background-color
+    content-text-color">
+    <div class="left-half">
+        <article>
+            <h2>Titre de l'article</h2>
+            <p>Weekends don't count unless you spend them doing something completely pointless.</p>
+        </article>
+        <article>
+            <h2>Titre de l'article</h2>
+            <p>Weekends don't count unless you spend them doing something completely pointless.</p>
+        </article>
+        <article>
+            <h2>Titre de l'article</h2>
+            <p>Weekends don't count unless you spend them doing something completely pointless.</p>
+        </article>
+        
+    </div>
+    <div class="right-half">
+        <div class="
+            sidenav
+            content-text-color">
+            <h2>Categories</h2>
+            <ul>
+                <li><a class="item" href="/TODO">Accueil</a> </li>
+                <li><a class="item" href="/TODO">Blogue</a> </li>
+                <li><a class="item" href="/TODO">A propos</a> </li>
+                <li><a class="item" href="/TODO">Nous joindre</a> </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+</section>
+</html>
