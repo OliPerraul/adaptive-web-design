@@ -65,6 +65,7 @@
 
         .topnav {
             display: flex;
+            flex-direction:column;
             flex-wrap: wrap;
             justify-content: space-between;
             list-style-type: none;
@@ -224,21 +225,20 @@
 
         .main-footer {            
             display: flex;
+            flex-direction: column;
             background-color: var(--dark-blue);
             color: var(--white);
             width: 100%;
         }
 
-        .main-footer .left {            
-            float: left;
-            text-align: left;
+        .main-footer .left {                        
+            text-align: center;
             margin: 8px;
             width: 100%;
         }
 
         .main-footer .right {            
-            float: right;
-            text-align: right;
+            text-align: center;
             margin: 8px;
             width: 100%;
         }
@@ -249,6 +249,12 @@
         /* ///// Desktop //// */
 
         @media only screen and (min-width: 768px) {            
+
+            /*Navbar*/
+
+            .topnav {                
+                flex-direction:row;
+            }
 
             /* Main Section */
 
@@ -282,6 +288,23 @@
                 height:25%;
                 
             }
+
+            /* Main footer */
+
+            .main-footer {                        
+                flex-direction: row;                    
+            }
+
+
+            .main-footer .left {            
+                float: left;
+                text-align: left;
+            }
+
+            .main-footer .right {            
+                float: right;
+                text-align: right;
+            }
         }
 
     </style>
@@ -295,11 +318,11 @@
         <body>Weekends don't count unless you spend them doing something completely pointless.</body>
         <footer>
             <div class="item">
-                <i class="part fa fa-calendar" style="font-size:32px;"></i>
+                <icon class="part fa fa-calendar" style="font-size:32px;"></icon>
                 <div class=part> 01/12/2020</div>
             </div>
             <div class="item">
-                <i class="part fa fa-user" style="font-size:32px;"></i>
+                <icon class="part fa fa-user" style="font-size:32px;"></icon>
                 <div class=part>Nom de l'auteur</div>
             </div>
             <button class="item" type="button">
