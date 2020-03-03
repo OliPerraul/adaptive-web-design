@@ -6,16 +6,16 @@
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        [class*="col-"] {
-            float: left;
-            padding: 15px;
-        }
-        :root
-        {
-            --dark-grey:rgb(137, 144, 144);
-            --dark-blue:#2e7aa0;
-            --azure:azure;
-            --white:white;
+
+        /* //////////////////////////////////////////////////////// */
+
+        /* ///// Global //// */
+
+        :root {
+            --dark-grey: rgb(137, 144, 144);
+            --dark-blue: #2e7aa0;
+            --azure: azure;
+            --white: white;
 
         }
 
@@ -23,14 +23,12 @@
             font-family: "Lucida Sans", sans-serif;
         }
 
-        /* Global */
-
         .background-color {
-            background-color:var(--azure);
+            background-color: var(--azure);
         }
 
         .background-color-light {
-            background-color:var(--white);
+            background-color: var(--white);
         }
 
         .background-color-dark {
@@ -40,6 +38,11 @@
         .text-color {
             color: var(--dark-blue)
         }
+        
+
+        /* //////////////////////////////////////////////////////// */        
+
+        /* ///// Mobile //// */
 
 
         /* Logo */
@@ -71,20 +74,24 @@
             display: list-item;
             margin: 0 32px;
             color: inherit;
-            text-align: center;            
+            text-align: center;
             vertical-align: middle;
             text-decoration: none;
         }
 
-        /* Content */
 
+        /* Main Section */
+        
         .main-section h1 {
-            font-size: 1.75rem;
-            margin: 0 0 0.75rem 0;
+            font-size: 1.75px;            
         }
 
-        .main-section {
+        .main-section .right {
             display: grid;
+            grid-column: 2;
+            margin-right: 0px;
+            margin-left: 0px;
+            margin-top: -8px;
         }
 
         .main-section .left {
@@ -93,14 +100,8 @@
             margin-right: 8px;
         }
 
-        .main-section .right {
-            display: grid;
-            grid-column: 2;
-            margin-left: 8px;
-        }
 
-        .main-section .left .content {
-            /* display: flex; */
+        .main-section .left .content {            
             margin: 16px;
             height: 100%;
         }
@@ -113,7 +114,55 @@
             height: 100%;
         }
 
+        .main-section {
+            display: flex;
+            flex-direction: column-reverse;
+            margin: 0px;            
+        }
+        
+        .main-section .right .content {            
+            margin: 0px;
+        }
+        
+        /* Sidenav */        
 
+        .main-section .sidenav {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            visibility: hidden;
+            margin-bottom: -180px;
+            width: 100%;
+        }
+
+        .main-section .sidenav .content {
+            margin: 16px 16px 16px 16px;
+        }
+
+        .main-section .sidenav .item {
+            float: left;
+            color: inherit;
+            vertical-align: middle;
+            text-decoration: none;
+        }
+
+        /* Search bar */
+
+        .main-section .search-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 8px;
+            height:48px;
+            width: 100%;
+        }
+
+        .main-section .search-section .search-bar {
+            display: flex;
+            flex-direction: row;
+        }
+
+        
         /* Article */
 
         .main-section .right .content article {
@@ -122,44 +171,42 @@
             align-items: left;
             text-align: left;
             margin-top: 16px;
-            margin-bottom: 16px;                            
+            margin-bottom: 16px;
         }
 
-        .main-section .right .content article body {
-            /* padding:16px; */            
-            margin: 16px;            
-            text-align: left;                        
+        .main-section .right .content article body {            
+            margin: 16px;
+            text-align: left;
             width: 100%;
-            height: 100%;  
+            height: 100%;
         }
 
         .main-section .content article footer {
-            display: flex;  
-            flex-direction: row;                        
-            align-items: center;             
-            background-color:var(--dark-blue);
-            color:var(--white);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: var(--dark-blue);
+            color: var(--white);
             width: 100%;
-            height: 100%;            
+            height: 100%;
         }
 
-        .main-section article footer .item {            
+        .main-section article footer .item {
             display: flex;
-            flex-direction:row;
-            align-items: center;            
+            flex-direction: row;
+            align-items: center;
             text-align: center;
             vertical-align: middle;
             margin: 8px;
             margin-left: 4px;
             margin-right: 4px;
-            width: 100%;
-            /* height: 100%; */
+            width: 100%;            
         }
 
-        .main-section article footer .item .part {            
+        .main-section article footer .item .part {
             display: flex;
-            flex-direction:row;
-            align-items: center;            
+            flex-direction: row;
+            align-items: center;
             margin: 4px;
             width: 100%;
             height: 100%;
@@ -168,95 +215,99 @@
         .main-section article footer button {
             background-color: white;
             width: 100%;
-            height: 40%;                                      
-            color:var(--dark-blue);                     
+            height: 40%;
+            color: var(--dark-blue);
         }
 
-        /* Search bar */
-
-        .main-section .search-section {                        
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 8px;            
-            height: 25%;
-            width: 100%;
-        }
-
-        .main-section .search-section .search-bar {                        
-            display: flex;            
-            flex-direction: row;                                             
-        }
-
-        /*Sidenav*/
-
-        .main-section .sidenav {
-            float: left;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 8px 8px 8px 8px;
-            flex-grow: 100%;
-        }
-
-        .main-section .sidenav .item {
-            float: left;
-            color: inherit;
-            vertical-align: middle;
-            text-decoration: none;
-            
-        }
 
         /* Main footer */
 
-        .main-footer {
-            /* padding:16px; */            
+        .main-footer {            
             display: flex;
-            background-color:var(--dark-blue);
-            color:var(--white);
+            background-color: var(--dark-blue);
+            color: var(--white);
             width: 100%;
         }
 
-        .main-footer .left {
-            /* padding:16px; */
+        .main-footer .left {            
             float: left;
             text-align: left;
             margin: 8px;
             width: 100%;
         }
 
-        
-        .main-footer .right {
-            /* padding:16px; */
+        .main-footer .right {            
             float: right;
             text-align: right;
             margin: 8px;
             width: 100%;
         }
+        
+
+        /* //////////////////////////////////////////////////////// */   
+
+        /* ///// Desktop //// */
+
+        @media only screen and (min-width: 768px) {            
+
+            /* Main Section */
+
+            .main-section {
+                display: grid;
+                flex-direction: unset ;                
+            }
+            
+
+            .main-section .right {
+                display: grid;
+                grid-column: 2;
+                margin-left: 0px;
+                margin-top: 0px;
+            }
+
+            /* Sidenav */
+
+            .main-section .sidenav {
+                visibility: visible;
+                margin-bottom: 0px;
+            }
+
+            /* Search bar */
+
+            .main-section .search-section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 8px;
+                height:25%;
+                
+            }
+        }
 
     </style>
 
-    <template id="article-template">
-        <article class="
-            background-color-light
-            text-color
-            ">
-            <h2>Titre de l'article</h2>
-            <body>Weekends don't count unless you spend them doing something completely pointless.</body>
-            <footer>
-                <div class="item">
-                    <i class="part fa fa-calendar" style="font-size:32px;"></i>
-                    <div class=part> 01/12/2020</div>
-                </div>
-                <div class="item">
-                    <i class="part fa fa-user" style="font-size:32px;"></i>
-                    <div class=part>Nom de l'auteur</div>
-                </div>
-                <button class="item" type="button">                    
-                    Lire la suite                    
-                </button>
-            </footer>
-        </article>
-    </template>
+<template id="article-template">
+    <article class="
+        background-color-light
+        text-color
+        ">
+        <h2>Titre de l'article</h2>
+        <body>Weekends don't count unless you spend them doing something completely pointless.</body>
+        <footer>
+            <div class="item">
+                <i class="part fa fa-calendar" style="font-size:32px;"></i>
+                <div class=part> 01/12/2020</div>
+            </div>
+            <div class="item">
+                <i class="part fa fa-user" style="font-size:32px;"></i>
+                <div class=part>Nom de l'auteur</div>
+            </div>
+            <button class="item" type="button">
+                Lire la suite
+            </button>
+        </footer>
+    </article>
+</template>
 
 </head>
 
@@ -298,7 +349,7 @@
             search-section 
             background-color">
                 <div class=search-bar>
-                    <input type="text" placeholder="Search.."></input>
+                    <input type="text" placeholder="Recherche"></input>
                     <icon class="fa fa-search icon"> </icon>
                 </div>
             </div>
@@ -307,19 +358,22 @@
             background-color
             text-color
             ">
-                <h2>Categories</h2>
-                <ul>
-                    <li><a class="item" href="/TODO">Lien vers categorie A</a> </li>
-                    <li><a class="item" href="/TODO">Lien vers categorie B</a> </li>
-                    <li><a class="item" href="/TODO">Lien vers categorie C</a> </li>
-                    <li><a class="item" href="/TODO">Lien vers categorie D</a> </li>
-                </ul>
+                <div class="content">
+                    <h2>Categories:</h2>
+                    <ul>
+
+                        <li><a class="item" href="/TODO">Lien vers categorie A</a> </li>
+                        <li><a class="item" href="/TODO">Lien vers categorie B</a> </li>
+                        <li><a class="item" href="/TODO">Lien vers categorie C</a> </li>
+                        <li><a class="item" href="/TODO">Lien vers categorie D</a> </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<footer class=main-footer>
+<footer class="main-footer">
     <p class="left">© Nom du blogue - tout droits reserves</p>
     <p class="right">Credits agence web de l'auteur</p>
 </footer>
