@@ -1,221 +1,327 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/stylesheet.css">
-<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+        :root
+        {
+            --dark-grey:rgb(137, 144, 144);
+            --dark-blue:#2e7aa0;
+            --azure:azure;
+            --white:white;
+
+        }
+
+        html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        /* Global */
+
+        .background-color {
+            background-color:var(--azure);
+        }
+
+        .background-color-light {
+            background-color:var(--white);
+        }
+
+        .background-color-dark {
+            background-color: var(--dark-grey);
+        }
+
+        .text-color {
+            color: var(--dark-blue)
+        }
 
 
-.content-text-color
-{
-    color:black;    
-}
+        /* Logo */
 
-.title-text-color
-{
-    color:#2e7aa0;    
-}
+        .logo {
+            vertical-align: middle;
+            width: 100%;
+        }
 
-.title-background-color
-{
-    background-color:azure;    
-}
+        .logo img {
 
-.content-background-color
-{
-    background-color:white;    
-}
-
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-}
-
-html {
-    font-family: "Lucida Sans", sans-serif;
-}
-
-/* Logo */
-
-.logo {    
-    vertical-align: middle;
-    width: 100%;
-}
-
-.logo img {    
-    
-    display: block;          
-    margin-left: auto;
-    margin-right: auto;
-    
-    width: 128px;
-    
-}
-
-/*Navbar*/
-
-.topnav { 
-    display: flex;  
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style-type: none;    
-}
-  
-.topnav .item {
-    float: left;
-    color: inherit;
-    vertical-align: middle;        
-    text-decoration: none;    
-}
-
-/*Article*/
-
-article {    
-    padding:16px;
-    margin:16px;
-    float:left;
-}
-
-article .content {
-    padding:16px;
-    margin:16px;
-    float:left;
-}
-
-/*Sidenav*/
-
-.sidenav {
-    width: 20%;
-    padding:16px;
-    margin:16px;
-    float: right; 
-}
-
-  
-.sidenav .item {
-    height: 100%;    
-    float: left;
-    color: inherit;
-    vertical-align: middle;        
-    text-decoration: none;    
-}
-
-/* Content */
-
-.content article {
-  position: relative;
-  top: 50%;
-  text-align: center;
-  transform: translate(0, -50%);
-  padding: 1rem;
-}
-
-.content h1 {
-  font-size: 1.75rem;
-  margin: 0 0 0.75rem 0;
-}
-
-.content {
-  display: grid;
-}
-
-.content .left-half {  
-  grid-column: 1;
-}
-
-.content .right-half {  
-  grid-column: 1;
-}
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 128px;
+        }
 
 
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-}
+        /*Navbar*/
 
-/* @media only screen and (min-width: 600px) {
-    
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-    
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-} */
-</style>
+        .topnav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+
+        .topnav .item {
+            display: list-item;
+            margin: 0 32px;
+            color: inherit;
+            text-align: center;            
+            vertical-align: middle;
+            text-decoration: none;
+        }
+
+        /* Content */
+
+        .main-section h1 {
+            font-size: 1.75rem;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .main-section {
+            display: grid;
+        }
+
+        .main-section .left {
+            display: grid;
+            grid-column: 1;
+            margin-right: 8px;
+        }
+
+        .main-section .right {
+            display: grid;
+            grid-column: 2;
+            margin-left: 8px;
+        }
+
+        .main-section .left .content {
+            /* display: flex; */
+            margin: 16px;
+            height: 100%;
+        }
+
+        .main-section .right .content {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin: 16px;
+            height: 100%;
+        }
+
+
+        /* Article */
+
+        .main-section .right .content article {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            text-align: left;
+            margin-top: 16px;
+            margin-bottom: 16px;                            
+        }
+
+        .main-section .right .content article body {
+            /* padding:16px; */            
+            margin: 16px;            
+            text-align: left;                        
+            width: 100%;
+            height: 100%;  
+        }
+
+        .main-section .content article footer {
+            display: flex;  
+            flex-direction: row;                        
+            align-items: center;             
+            background-color:var(--dark-blue);
+            color:var(--white);
+            width: 100%;
+            height: 100%;            
+        }
+
+        .main-section article footer .item {            
+            display: flex;
+            flex-direction:row;
+            align-items: center;            
+            text-align: center;
+            vertical-align: middle;
+            margin: 8px;
+            margin-left: 4px;
+            margin-right: 4px;
+            width: 100%;
+            /* height: 100%; */
+        }
+
+        .main-section article footer .item .part {            
+            display: flex;
+            flex-direction:row;
+            align-items: center;            
+            margin: 4px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main-section article footer button {
+            background-color: white;
+            width: 100%;
+            height: 40%;                                      
+            color:var(--dark-blue);                     
+        }
+
+        /* Search bar */
+
+        .main-section .search-section {                        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 8px;            
+            height: 25%;
+            width: 100%;
+        }
+
+        .main-section .search-section .search-bar {                        
+            display: flex;            
+            flex-direction: row;                                             
+        }
+
+        /*Sidenav*/
+
+        .main-section .sidenav {
+            float: left;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 8px 8px 8px 8px;
+            flex-grow: 100%;
+        }
+
+        .main-section .sidenav .item {
+            float: left;
+            color: inherit;
+            vertical-align: middle;
+            text-decoration: none;
+            
+        }
+
+        /* Main footer */
+
+        .main-footer {
+            /* padding:16px; */            
+            display: flex;
+            background-color:var(--dark-blue);
+            color:var(--white);
+            width: 100%;
+        }
+
+        .main-footer .left {
+            /* padding:16px; */
+            float: left;
+            text-align: left;
+            margin: 8px;
+            width: 100%;
+        }
+
+        
+        .main-footer .right {
+            /* padding:16px; */
+            float: right;
+            text-align: right;
+            margin: 8px;
+            width: 100%;
+        }
+
+    </style>
+
+    <template id="article-template">
+        <article class="
+            background-color-light
+            text-color
+            ">
+            <h2>Titre de l'article</h2>
+            <body>Weekends don't count unless you spend them doing something completely pointless.</body>
+            <footer>
+                <div class="item">
+                    <i class="part fa fa-calendar" style="font-size:32px;"></i>
+                    <div class=part> 01/12/2020</div>
+                </div>
+                <div class="item">
+                    <i class="part fa fa-user" style="font-size:32px;"></i>
+                    <div class=part>Nom de l'auteur</div>
+                </div>
+                <button class="item" type="button">                    
+                    Lire la suite                    
+                </button>
+            </footer>
+        </article>
+    </template>
+
 </head>
 
 <header>
-    <div class="logo title-background-color">
-        <img src="../resources/logo.png" alt="Logo"> 
+    <div class="logo topnav background-color">
+        <img src="../resources/logo.png" alt="Logo">
     </div>
     <nav class="
         topnav 
-        title-text-color 
-        title-background-color">    
-        <li><a class="item" href="/TODO">Accueil</a> </li>
-        <li><a class="item" href="/TODO">Blogue</a> </li>
-        <li><a class="item" href="/TODO">A propos</a> </li>
-        <li><a class="item" href="/TODO">Nous joindre</a> </li>        
+        text-color 
+        background-color">
+        <li><a class="item" href="/TODO">Accueil</a></li>
+        <li><a class="item" href="/TODO">Blogue</a></li>
+        <li><a class="item" href="/TODO">A propos</a></li>
+        <li><a class="item" href="/TODO">Nous joindre</a></li>
     </nav>
 </header>
 
-<section>
-
 <section class="
-    content 
-    content-background-color
-    content-text-color">
-    <div class="left-half">
-        <article>
-            <h2>Titre de l'article</h2>
-            <p>Weekends don't count unless you spend them doing something completely pointless.</p>
-        </article>
-        <article>
-            <h2>Titre de l'article</h2>
-            <p>Weekends don't count unless you spend them doing something completely pointless.</p>
-        </article>
-        <article>
-            <h2>Titre de l'article</h2>
-            <p>Weekends don't count unless you spend them doing something completely pointless.</p>
-        </article>
-        
+    main-section     
+    background-color-dark    
+    text-color">
+    <div class="left">
+        <div class="content" id=articles>
+            <script>
+                document.getElementById("articles").innerHTML +=
+                    document.getElementById("article-template").innerHTML;
+            </script>
+            <script>
+                document.getElementById("articles").innerHTML +=
+                    document.getElementById("article-template").innerHTML;
+            </script>
+        </div>
     </div>
-    <div class="right-half">
-        <div class="
+
+    <div class="right">
+        <div class="content">
+            <div class="
+            search-section 
+            background-color">
+                <div class=search-bar>
+                    <input type="text" placeholder="Search.."></input>
+                    <icon class="fa fa-search icon"> </icon>
+                </div>
+            </div>
+            <div class="
             sidenav
-            content-text-color">
-            <h2>Categories</h2>
-            <ul>
-                <li><a class="item" href="/TODO">Accueil</a> </li>
-                <li><a class="item" href="/TODO">Blogue</a> </li>
-                <li><a class="item" href="/TODO">A propos</a> </li>
-                <li><a class="item" href="/TODO">Nous joindre</a> </li>
-            </ul>
+            background-color
+            text-color
+            ">
+                <h2>Categories</h2>
+                <ul>
+                    <li><a class="item" href="/TODO">Lien vers categorie A</a> </li>
+                    <li><a class="item" href="/TODO">Lien vers categorie B</a> </li>
+                    <li><a class="item" href="/TODO">Lien vers categorie C</a> </li>
+                    <li><a class="item" href="/TODO">Lien vers categorie D</a> </li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
 
-</section>
+<footer class=main-footer>
+    <p class="left">© Nom du blogue - tout droits reserves</p>
+    <p class="right">Credits agence web de l'auteur</p>
+</footer>
+
 </html>
