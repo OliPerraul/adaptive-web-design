@@ -1,12 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: [
-    '@babel/polyfill',
+    'babel-polyfill',
     './src/js/main.js',
     './src/scss/main.scss'
   ],
@@ -117,15 +117,16 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: '[name]-[hash].css'
-    }),
-    new CleanWebpackPlugin(
+    })
+   /*  new CleanWebpackPlugin(
       ['dist'],
       {
         verbose: false,
         dry: false,
         exclude: ['index.html']
+      
       }
-    )
+    ) */
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
