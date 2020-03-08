@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        /* //////////////////////////////////////////////////////// */
+
+        /* ///// Global //// */
+
+        :root {
+            --dark-grey: rgb(137, 144, 144);
+            --dark-blue: #2e7aa0;
+            --azure: azure;
+            --white: white;
+
+        }
+
+        html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .background-color {
+            background-color: var(--azure);
+        }
+
+        .background-color-light {
+            background-color: var(--white);
+        }
+
+        .background-color-dark {
+            background-color: var(--dark-grey);
+        }
+
+        .text-color {
+            color: var(--dark-blue)
+        }
+        
+
+        /* //////////////////////////////////////////////////////// */        
+
+        /* ///// Mobile //// */
+
+
+        /* Logo */
+
+        .logo {
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .logo img {
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 128px;
+        }
+
+
+        /*Navbar*/
+
+        .topnav {
+            display: flex;
+            flex-direction:column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+
+        .topnav .item {
+            display: list-item;
+            margin: 0 32px;
+            color: inherit;
+            text-align: center;
+            vertical-align: middle;
+            text-decoration: none;
+        }
+
+
+        /* Main Section */
+        
+        .main-section h1 {
+            font-size: 1.75px;            
+        }
+
+        .main-section .right {
+            display: grid;
+            grid-column: 2;
+            margin-right: 0px;
+            margin-left: 0px;
+            margin-top: -8px;
+        }
+
+        .main-section .left {
+            display: grid;
+            grid-column: 1;
+            margin-right: 8px;
+        }
+
+
+        .main-section .left .content {            
+            margin: 16px;
+            height: 100%;
+        }
+
+        .main-section .right .content {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin: 16px;
+            height: 100%;
+        }
+
+        .main-section {
+            display: flex;
+            flex-direction: column-reverse;
+            margin: 0px;            
+        }
+        
+        .main-section .right .content {            
+            margin: 0px;
+        }
+        
+        /* Sidenav */        
+
+        .main-section .sidenav {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            visibility: hidden;
+            margin-bottom: -180px;
+            width: 100%;
+        }
+
+        .main-section .sidenav .content {
+            margin: 16px 16px 16px 16px;
+        }
+
+        .main-section .sidenav .item {
+            float: left;
+            color: inherit;
+            vertical-align: middle;
+            text-decoration: none;
+        }
+
+        /* Search bar */
+
+        .main-section .search-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 8px;
+            height:48px;
+            width: 100%;
+        }
+
+        .main-section .search-section .search-bar {
+            display: flex;
+            flex-direction: row;
+        }
+
+        
+        /* Article */
+
+        .main-section .right .content article {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            text-align: left;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        .main-section .right .content article body {            
+            margin: 16px;
+            text-align: left;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main-section .content article footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: var(--dark-blue);
+            color: var(--white);
+            width: 100%;
+            height: 100%;
+        }
+
+        .main-section article footer .item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            vertical-align: middle;
+            margin: 8px;
+            margin-left: 4px;
+            margin-right: 4px;
+            width: 100%;            
+        }
+
+        .main-section article footer .item .part {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 4px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main-section article footer button {
+            background-color: white;
+            width: 100%;
+            height: 40%;
+            color: var(--dark-blue);
+        }
+
+
+        /* Main footer */
+
+        .main-footer {            
+            display: flex;
+            flex-direction: column;
+            background-color: var(--dark-blue);
+            color: var(--white);
+            width: 100%;
+        }
+
+        .main-footer .left {                        
+            text-align: center;
+            margin: 8px;
+            width: 100%;
+        }
+
+        .main-footer .right {            
+            text-align: center;
+            margin: 8px;
+            width: 100%;
+        }
+        
+
+        /* //////////////////////////////////////////////////////// */   
+
+        /* ///// Desktop //// */
+
+        @media only screen and (min-width: 768px) {            
+
+            /*Navbar*/
+
+            .topnav {                
+                flex-direction:row;
+            }
+
+            /* Main Section */
+
+            .main-section {
+                display: grid;
+                flex-direction: unset ;                
+            }
+            
+
+            .main-section .right {
+                display: grid;
+                grid-column: 2;
+                margin-left: 0px;
+                margin-top: 0px;
+            }
+
+            /* Sidenav */
+
+            .main-section .sidenav {
+                visibility: visible;
+                margin-bottom: 0px;
+            }
+
+            /* Search bar */
+
+            .main-section .search-section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 8px;
+                height:25%;
+                
+            }
+
+            /* Main footer */
+
+            .main-footer {                        
+                flex-direction: row;                    
+            }
+
+
+            .main-footer .left {            
+                float: left;
+                text-align: left;
+            }
+
+            .main-footer .right {            
+                float: right;
+                text-align: right;
+            }
+        }
+
+    </style>
+
+<template id="article-template">
+    <article class="
+        background-color-light
+        text-color
+        ">
+        <h2>Titre de l'article</h2>
+        <body>Lorem ipsum dolor sit amet, per ea natum diceret, tritani pericula consequuntur eu pri, et sed numquam veritus. Eu natum aliquip pro, eu natum modus fastidii ius. Nostro sanctus nec eu, nec ad justo falli electram. Nonumy nominavi eligendi in has, tale quaestio cu vix. Ei mel soleat suavitate abhorreant, vim ad illud mandamus. Ut est labores tacimates, ex debet admodum verterem sit, cu vel doming dolores.
+
+        Decore aliquam voluptatibus ut pri. Id per quaestio persequeris, id elitr dissentiunt nam. Per consul discere appetere te, has ubique equidem perfecto et. Agam harum mel eu, pri ex causae dolorum ocurreret. Ut ullum gloriatur temporibus vis, in has alii volumus eleifend, est omnis brute ne.
+            </body>
+        <footer>
+            <div class="item">
+                <icon class="part fa fa-calendar" style="font-size:32px;"></icon>
+                <div class=part> 01/12/2020</div>
+            </div>
+            <div class="item">
+                <icon class="part fa fa-user" style="font-size:32px;"></icon>
+                <div class=part>Nom de l'auteur</div>
+            </div>
+            <button class="item" type="button">
+                Lire la suite
+            </button>
+        </footer>
+    </article>
+</template>
+
+</head>
+
+<header>
+    <div class="logo topnav background-color">
+        <img src="../src/resources/logo.png" alt="Logo">
+    </div>
+    <nav class="
+        topnav 
+        text-color 
+        background-color">
+        <li><a class="item" href="/TODO">Accueil</a></li>
+        <li><a class="item" href="/TODO">Blogue</a></li>
+        <li><a class="item" href="/TODO">A propos</a></li>
+        <li><a class="item" href="/TODO">Nous joindre</a></li>
+    </nav>
+</header>
+
+<section class="
+    main-section     
+    background-color-dark    
+    text-color">
+    <div class="left">
+        <div class="content" id=articles>
+            <script>
+                document.getElementById("articles").innerHTML +=
+                    document.getElementById("article-template").innerHTML;
+            </script>
+            <script>
+                document.getElementById("articles").innerHTML +=
+                    document.getElementById("article-template").innerHTML;
+            </script>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="content">
+            <div class="
+            search-section 
+            background-color">
+                <div class=search-bar>
+                    <input type="text" placeholder="Recherche"></input>
+                    <icon class="fa fa-search icon"> </icon>
+                </div>
+            </div>
+            <div class="
+            sidenav
+            background-color
+            text-color
+            ">
+                <div class="content">
+                    <h2>Categories:</h2>
+                    <ul>
+
+                        <li><a class="item" href="/TODO">Lien vers categorie A</a> </li>
+                        <li><a class="item" href="/TODO">Lien vers categorie B</a> </li>
+                        <li><a class="item" href="/TODO">Lien vers categorie C</a> </li>
+                        <li><a class="item" href="/TODO">Lien vers categorie D</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <p class="left">© Nom du blogue - tout droits reserves</p>
+    <p class="right">Credits agence web de l'auteur</p>
+</footer>
+
+</html>
