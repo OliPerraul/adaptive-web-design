@@ -6,29 +6,28 @@
     <link rel="stylesheet" href="./css/stylesheet.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
-    <template id="article-template">
-        <article class="
+<template id="article-template">
+    <article class="
         background-color-light
         text-color
         ">
-            <h2>Titre de l'article</h2>
-            <div>
-                Weekends don't count unless you spend them doing something completely pointless.</body>
-                <div class="">
-                    <div class="item">
-                        <icon class="part fa fa-calendar" style="font-size:32px;"></icon>
-                        <div class=part> 01/12/2020</div>
-                    </div>
-                    <div class="item">
-                        <icon class="part fa fa-user" style="font-size:32px;"></icon>
-                        <div class=part>Nom de l'auteur</div>
-                    </div>
-                    <button class="item" type="button">
-                        Lire la suite
-                    </button>
-                </div>
+        <h2>Titre de l'article</h2>
+        <body>Weekends don't count unless you spend them doing something completely pointless.</body>
+        <footer>
+            <div class="item">
+                <icon class="part fa fa-calendar" style="font-size:32px;"></icon>
+                <div class=part> 01/12/2020</div>
             </div>
-    </template>
+            <div class="item">
+                <icon class="part fa fa-user" style="font-size:32px;"></icon>
+                <div class=part>Nom de l'auteur</div>
+            </div>
+            <button class="item" type="button">
+                Lire la suite
+            </button>
+        </footer>
+    </article>
+</template>
 
 </head>
 
@@ -47,11 +46,10 @@
     </nav>
 </header>
 
-<body class="
+<section class="
     main-section     
     background-color-dark    
     text-color">
-
     <div class="left">
         <div class="content" id=articles>
             <script>
@@ -83,6 +81,7 @@
                 <div class="content">
                     <h2>Categories:</h2>
                     <ul>
+
                         <li><a class="item" href="/TODO">Lien vers categorie A</a> </li>
                         <li><a class="item" href="/TODO">Lien vers categorie B</a> </li>
                         <li><a class="item" href="/TODO">Lien vers categorie C</a> </li>
@@ -92,12 +91,11 @@
             </div>
         </div>
     </div>
+</section>
 
-    <footer class="main-footer">
-        <p class="left">© Nom du blogue - tout droits reserves</p>
-        <p class="right">Credits agence web de l'auteur</p>
-    </footer>
-
-</body>
+<footer class="main-footer">
+    <p class="left">© Nom du blogue - tout droits reserves</p>
+    <p class="right">Credits agence web de l'auteur</p>
+</footer>
 
 </html>
