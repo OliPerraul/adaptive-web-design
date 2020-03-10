@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -7,42 +6,42 @@
     <link rel="stylesheet" href="./css/stylesheet.css">
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
-<template id="article-template">
-    <article class="
+    <template id="article-template">
+        <article class="
         background-color-light
         text-color">
 
-    <body>
-        <h2>Titre de l'article</h2>
-        <p>  dolor sit amet, per ea natum diceret, tritani pericula consequuntur eu pri, et sed numquam veritus. Eu natum aliquip pro, eu natum modus fastidii ius. Nostro sanctus nec eu, nec ad justo falli electram. Nonumy nominavi eligendi in has, tale quaestio cu vix. Ei mel soleat suavitate abhorreant, vim ad illud mandamus. <span id="dots">...</span><span id="more"></span>Ut est labores tacimates, ex debet admodum verterem sit, cu vel doming dolores.
-        Decore aliquam voluptatibus ut pri. Id per quaestio persequeris, id elitr dissentiunt nam. Per consul discere appetere te, has ubique equidem perfecto et. Agam harum mel eu, pri ex causae dolorum ocurreret. Ut ullum gloriatur temporibus vis, in has alii volumus eleifend, est omnis brute ne.</span></p>
+            <div class="article-body">
+                <h2>Titre de l'article</h2>
+                <p> dolor sit amet, per ea natum diceret, tritani pericula consequuntur eu pri, et sed numquam veritus.
+                    Eu natum aliquip pro, eu natum modus fastidii ius. Nostro sanctus nec eu, nec ad justo falli
+                    electram. Nonumy nominavi eligendi in has, tale quaestio cu vix. Ei mel soleat suavitate abhorreant,
+                    vim ad illud mandamus. <span id="dots">...</span><span id="more"></span>Ut est labores tacimates, ex
+                    debet admodum verterem sit, cu vel doming dolores.
+                    Decore aliquam voluptatibus ut pri. Id per quaestio persequeris, id elitr dissentiunt nam. Per
+                    consul discere appetere te, has ubique equidem perfecto et. Agam harum mel eu, pri ex causae dolorum
+                    ocurreret. Ut ullum gloriatur temporibus vis, in has alii volumus eleifend, est omnis brute ne.
+                </p>
 
-     <button class="item" onclick="myFunction()" id="myBtn">Read more</button>  
+                <div class="article-footer">
+                    <div class="item">
+                        <icon class="part fa fa-calendar" style="font-size:32px;"></icon>
+                        <div class=part> 01/12/2020</div>
+                    </div>
+                    <div class="item">
+                        <icon class="part fa fa-user" style="font-size:32px;"></icon>
+                        <div class=part>Nom de l'auteur</div>
+                    </div>
 
-    
-    </body> 
+                    <button class="item" type="button">
+                        Lire la suite
+                    </button>
 
-
-        <footer>
-            <div class="item">
-                <icon class="part fa fa-calendar" style="font-size:32px;"></icon>
-                <div class=part> 01/12/2020</div>
+                </div>
             </div>
-            <div class="item">
-                <icon class="part fa fa-user" style="font-size:32px;"></icon>
-                <div class=part>Nom de l'auteur</div>
-            </div>
 
-            <button class="item" type="button">
-                    Lire la suite
-                </button>
-    
-        
-        </footer>
-
-   
-    </article>
-</template>
+        </article>
+    </template>
 
 </head>
 
@@ -96,7 +95,6 @@
                 <div class="content">
                     <h2>Categories:</h2>
                     <ul>
-
                         <li><a class="item" href="/TODO">Lien vers categorie A</a> </li>
                         <li><a class="item" href="/TODO">Lien vers categorie B</a> </li>
                         <li><a class="item" href="/TODO">Lien vers categorie C</a> </li>
