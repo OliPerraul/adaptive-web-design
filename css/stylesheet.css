@@ -6,10 +6,10 @@
 
 
 :root {
-    --dark-grey: rgb(137, 144, 144);
-    --dark-blue: #2e7aa0;
-    --azure: azure;
-    --white: white;
+    -dark-grey: rgb(137, 144, 144);
+    -dark-blue: #2e7aa0;
+    -azure: azure;
+    -white: white;
 
 }
 
@@ -18,19 +18,19 @@ html {
 }
 
 .background-color {
-    background-color: var(--azure);
+    background-color: var(-azure);
 }
 
 .background-color-light {
-    background-color: var(--white);
+    background-color: var(-white);
 }
 
 .background-color-dark {
-    background-color: var(--dark-grey);
+    background-color: var(-dark-grey);
 }
 
 .text-color {
-    color: var(--dark-blue)
+    color: var(-dark-blue)
 }
 
 
@@ -123,7 +123,7 @@ html {
 
 .main-section .sidenav {
     display: flex;
-    align-items: left;
+    align-items: start;
     justify-content: left;
     visibility: hidden;
     margin-bottom: -180px;
@@ -163,8 +163,8 @@ html {
 .main-section .right .content article {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    text-align: left;
+    align-items: start;
+    text-align: start;
     margin-top: 16px;
     margin-bottom: 16px;
 }
@@ -180,8 +180,8 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--dark-blue);
-    color: var(--white);
+    background-color: var(-dark-blue);
+    color: var(-white);
     width: 100%;
     height: 100%;
 }
@@ -211,7 +211,7 @@ html {
     background-color: white;
     width: 100%;
     height: 40%;
-    color: var(--dark-blue);
+    color: var(-dark-blue);
 }
 
 
@@ -220,8 +220,8 @@ html {
 .main-footer {            
     display: flex;
     flex-direction: column;
-    background-color: var(--dark-blue);
-    color: var(--white);
+    background-color: var(-dark-blue);
+    color: var(-white);
     width: 100%;
 }
 
