@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "IGE511_TP2 ",
   "main": "index.html",
-  "scripts": {
-  },
+  "scripts": {},
   "author": [
     "yassir naouli",
     "oliver perrault"
